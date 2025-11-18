@@ -21,9 +21,16 @@
 //! These examples align with 2024 CISA/FBI guidance recommending memory-safe
 //! languages for critical infrastructure to eliminate 70% of security vulnerabilities.
 
+#![allow(clippy::empty_line_after_doc_comments)]
+#![allow(clippy::mixed_attributes_style)]
+#![allow(dead_code)]
+#![allow(clippy::vec_init_then_push)]
+#![allow(clippy::approx_constant)]
+#![allow(clippy::useless_vec)]
+
 pub mod buffer_overflow_prevention;
-pub mod use_after_free_prevention;
 pub mod data_race_prevention;
+pub mod use_after_free_prevention;
 
 /// Module demonstrating buffer overflow prevention
 pub mod buffer_overflow {
@@ -134,13 +141,13 @@ pub mod use_after_free {
 }
 
 /// Module demonstrating data race prevention
+///
+/// Data race prevention through ownership and type system
+///
+/// Rust prevents data races at compile time through the type system.
 pub mod data_race {
     use std::sync::{Arc, Mutex};
     use std::thread;
-
-    //! Data race prevention through ownership and type system
-    //!
-    //! Rust prevents data races at compile time through the type system.
 
     /// Arc and Mutex for safe concurrent access
     pub fn safe_concurrent_access() {
@@ -376,11 +383,11 @@ pub mod uninitialized_memory {
 }
 
 /// Module demonstrating memory leak prevention with RAII
+///
+/// Memory leak prevention through RAII (Resource Acquisition Is Initialization)
 pub mod memory_leak {
     use std::fs::File;
     use std::io::Write;
-
-    //! Memory leak prevention through RAII (Resource Acquisition Is Initialization)
 
     /// RAII ensures resources are cleaned up
     pub fn raii_file_handling() {

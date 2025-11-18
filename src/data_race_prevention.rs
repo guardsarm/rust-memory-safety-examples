@@ -102,7 +102,7 @@ struct SendableData {
 
 /// This type is NOT Send due to raw pointer
 struct NotSendable {
-    ptr: *mut i32,  // Raw pointers are not Send
+    ptr: *mut i32, // Raw pointers are not Send
 }
 
 /// Compiler enforces thread safety
@@ -178,7 +178,7 @@ pub fn scoped_threads_safe() {
     });
 
     // All spawned threads are joined before scope ends
-    data.push(4);  // Safe to modify again
+    data.push(4); // Safe to modify again
 }
 
 #[cfg(test)]

@@ -33,23 +33,23 @@
 
 /// Example 1: Ownership prevents use-after-free
 pub fn ownership_prevents_uaf() {
-    let data = Box::new(42);  // Heap allocation
-    let value = *data;        // Copy the value
+    let data = Box::new(42); // Heap allocation
+    let value = *data; // Copy the value
 
-    drop(data);               // Explicitly free memory
+    drop(data); // Explicitly free memory
 
     // This would NOT compile:
     // println!("{}", *data); // Compile error: value moved!
 
-    println!("Copied value: {}", value);  // Safe: we copied the value
+    println!("Copied value: {}", value); // Safe: we copied the value
 }
 
 /// Example 2: References have lifetimes
 pub fn lifetime_prevents_dangling_ref() {
-    let reference;
+    let _reference: Option<&String> = None;
 
     {
-        let data = String::from("temporary");
+        let _data = String::from("temporary");
         // This would NOT compile:
         // reference = &data;  // Compile error: `data` doesn't live long enough
     }
@@ -61,7 +61,7 @@ pub fn lifetime_prevents_dangling_ref() {
 pub fn borrowing_prevents_uaf() {
     let mut data = vec![1, 2, 3];
 
-    let reference = &data[0];  // Immutable borrow
+    let reference = &data[0]; // Immutable borrow
 
     // This would NOT compile:
     // data.clear();  // Compile error: cannot mutate while borrowed!
@@ -69,7 +69,7 @@ pub fn borrowing_prevents_uaf() {
     println!("First element: {}", reference);
     // reference is no longer used, borrow ends
 
-    data.clear();  // Now we can mutate
+    data.clear(); // Now we can mutate
     println!("Vector cleared");
 }
 
@@ -87,7 +87,7 @@ pub fn shared_ownership_safe() {
     // Memory is freed only when ALL Rc references are dropped
     drop(clone1);
     drop(clone2);
-    drop(data);  // Now memory is freed
+    drop(data); // Now memory is freed
 }
 
 /// Example 5: Real-world pattern - safe object lifecycle
@@ -116,7 +116,7 @@ pub fn safe_object_usage() {
     let data_ref = obj.get_data();
     println!("Data: {:?}", data_ref);
 
-    let owned_data = obj.consume();  // obj is moved here
+    let owned_data = obj.consume(); // obj is moved here
 
     // This would NOT compile:
     // obj.get_data();  // Compile error: value used after move!

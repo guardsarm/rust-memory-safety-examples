@@ -40,7 +40,7 @@ pub fn safe_array_access() {
     let array = [1, 2, 3, 4, 5];
 
     // Compile-time known indices are checked
-    let _first = array[0];  // OK
+    let _first = array[0]; // OK
 
     // Runtime bounds checking (panics on out-of-bounds)
     // let _invalid = array[10];  // Would panic!
@@ -123,15 +123,16 @@ mod tests {
 
     #[test]
     #[should_panic]
+    #[allow(unconditional_panic, clippy::out_of_bounds_indexing)]
     fn test_out_of_bounds_panic() {
         let array = [1, 2, 3];
-        let _ = array[10];  // Panics (controlled failure, not undefined behavior)
+        let _ = array[10]; // Panics (controlled failure, not undefined behavior)
     }
 
     #[test]
     fn test_safe_get() {
         let array = [1, 2, 3];
         assert_eq!(array.get(1), Some(&2));
-        assert_eq!(array.get(10), None);  // Safe handling
+        assert_eq!(array.get(10), None); // Safe handling
     }
 }
