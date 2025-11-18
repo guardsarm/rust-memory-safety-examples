@@ -1,5 +1,10 @@
 # Rust Memory Safety Examples
 
+[![CI](https://github.com/guardsarm/rust-memory-safety-examples/actions/workflows/ci.yml/badge.svg)](https://github.com/guardsarm/rust-memory-safety-examples/actions/workflows/ci.yml)
+[![Crates.io](https://img.shields.io/crates/v/rust-memory-safety-examples.svg)](https://crates.io/crates/rust-memory-safety-examples)
+[![Documentation](https://docs.rs/rust-memory-safety-examples/badge.svg)](https://docs.rs/rust-memory-safety-examples)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Educational examples demonstrating memory-safe programming patterns in Rust for financial systems and critical infrastructure. This repository provides clear, documented examples of how Rust eliminates entire classes of security vulnerabilities.
 
 ## Purpose
@@ -45,7 +50,7 @@ These examples directly address **2024 CISA/FBI guidance** recommending memory-s
 
 ```bash
 # Clone repository
-git clone https://github.com/your-username/rust-memory-safety-examples
+git clone https://github.com/guardsarm/rust-memory-safety-examples
 cd rust-memory-safety-examples
 
 # Run all examples
@@ -218,7 +223,7 @@ If you use these examples in educational or research contexts, please cite:
 
 ```
 Awunor, T.C. (2024). Rust Memory Safety Examples: Educational Demonstrations
-of Memory-Safe Programming. https://github.com/your-username/rust-memory-safety-examples
+of Memory-Safe Programming. https://github.com/guardsarm/rust-memory-safety-examples
 ```
 
 ## References
@@ -230,9 +235,9 @@ of Memory-Safe Programming. https://github.com/your-username/rust-memory-safety-
 
 ## Related Projects
 
-- [rust-secure-logger](https://github.com/your-username/rust-secure-logger) - Secure logging implementation
-- [rust-crypto-utils](https://github.com/your-username/rust-crypto-utils) - Memory-safe cryptography
-- [rust-transaction-validator](https://github.com/your-username/rust-transaction-validator) - Safe transaction processing
+- [rust-secure-logger](https://github.com/guardsarm/rust-secure-logger) - Secure logging implementation
+- [rust-crypto-utils](https://github.com/guardsarm/rust-crypto-utils) - Memory-safe cryptography
+- [rust-transaction-validator](https://github.com/guardsarm/rust-transaction-validator) - Safe transaction processing
 
 ---
 
