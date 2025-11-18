@@ -1,0 +1,26 @@
+[package]
+name = "rust-memory-safety-examples"
+version = "0.1.0"
+edition = "2021"
+authors = ["Tony Chuks Awunor <your-email@example.com>"]
+description = "Educational examples demonstrating memory-safe programming patterns in Rust"
+license = "MIT"
+repository = "https://github.com/your-username/rust-memory-safety-examples"
+keywords = ["memory-safety", "security", "education", "rust", "examples"]
+categories = ["development-tools", "rust-patterns"]
+
+[dependencies]
+
+[dev-dependencies]
+
+[[example]]
+name = "buffer_overflow_prevention"
+path = "examples/buffer_overflow_prevention.rs"
+
+[[example]]
+name = "use_after_free_prevention"
+path = "examples/use_after_free_prevention.rs"
+
+[[example]]
+name = "data_race_prevention"
+path = "examples/data_race_prevention.rs"
