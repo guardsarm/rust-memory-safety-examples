@@ -5,7 +5,7 @@ edition = "2021"
 authors = ["Tony Chuks Awunor <your-email@example.com>"]
 description = "Educational examples demonstrating memory-safe programming patterns in Rust"
 license = "MIT"
-repository = "https://github.com/your-username/rust-memory-safety-examples"
+repository = "https://github.com/guardsarm/rust-memory-safety-examples"
 keywords = ["memory-safety", "security", "education", "rust", "examples"]
 categories = ["development-tools", "rust-patterns"]
 
