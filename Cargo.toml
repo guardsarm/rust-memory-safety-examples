@@ -1,17 +1,19 @@
 [package]
 name = "rust-memory-safety-examples"
-version = "0.1.0"
+version = "2.0.0"
 edition = "2021"
 authors = ["Tony Chuks Awunor <chuksawunor@guardsarm.com>"]
-description = "Educational examples demonstrating memory-safe programming patterns in Rust"
+description = "Comprehensive educational examples demonstrating memory-safe programming patterns with CVE case studies and benchmarks"
 license = "MIT"
 repository = "https://github.com/guardsarm/rust-memory-safety-examples"
 keywords = ["memory-safety", "security", "education", "rust", "examples"]
 categories = ["development-tools", "rust-patterns"]
+readme = "README.md"
 
 [dependencies]
 
 [dev-dependencies]
+criterion = "0.5"
 
 [[example]]
 name = "buffer_overflow_prevention"
@@ -24,3 +26,15 @@ path = "examples/use_after_free_prevention.rs"
 [[example]]
 name = "data_race_prevention"
 path = "examples/data_race_prevention.rs"
+
+[[example]]
+name = "cve_case_studies"
+path = "examples/cve_case_studies.rs"
+
+[[example]]
+name = "secure_patterns"
+path = "examples/secure_patterns.rs"
+
+[[bench]]
+name = "safety_overhead"
+harness = false

@@ -1,12 +1,20 @@
-//! # Rust Memory Safety Examples
+//! # Rust Memory Safety Examples v2.0
 //!
-//! Educational examples demonstrating memory-safe programming patterns in Rust
-//! for financial systems and critical infrastructure.
+//! Comprehensive educational examples demonstrating memory-safe programming patterns
+//! in Rust for financial systems, critical infrastructure, and security-sensitive applications.
 //!
 //! ## Purpose
 //!
 //! This library provides clear, documented examples of how Rust's ownership system
-//! prevents common memory safety vulnerabilities that affect C/C++ systems.
+//! prevents common memory safety vulnerabilities that affect C/C++ systems. Version 2.0
+//! adds CVE case studies, secure programming patterns, and performance benchmarks.
+//!
+//! ## What's New in v2.0
+//!
+//! - **CVE Case Studies**: Real-world vulnerability analysis (Heartbleed, Baron Samedit, etc.)
+//! - **Secure Patterns**: Type-state, capability-based security, secret wrappers
+//! - **Performance Benchmarks**: Measure safety overhead with criterion benchmarks
+//! - **Enhanced Documentation**: Comprehensive explanations with industry references
 //!
 //! ## Comparative Examples
 //!
@@ -16,10 +24,30 @@
 //! - Explanations of how Rust prevents the vulnerability
 //! - Real-world CVE references
 //!
+//! ## Running Examples
+//!
+//! ```bash
+//! # Run CVE case studies
+//! cargo run --example cve_case_studies
+//!
+//! # Run secure patterns demonstration
+//! cargo run --example secure_patterns
+//!
+//! # Run benchmarks
+//! cargo bench
+//! ```
+//!
 //! ## Alignment with Federal Guidance
 //!
-//! These examples align with 2024 CISA/FBI guidance recommending memory-safe
+//! These examples align with 2024-2025 CISA/FBI/NSA guidance recommending memory-safe
 //! languages for critical infrastructure to eliminate 70% of security vulnerabilities.
+//!
+//! ## Industry Research References
+//!
+//! - Microsoft Security: ~70% of CVEs are memory safety issues
+//! - Google Chrome: ~70% of high-severity bugs are memory safety issues
+//! - CISA: Memory safety roadmap for critical infrastructure (2024)
+//! - NSA: Software Memory Safety Cybersecurity Information Sheet
 
 #![allow(clippy::empty_line_after_doc_comments)]
 #![allow(clippy::mixed_attributes_style)]
